@@ -10,7 +10,3 @@ https://nczonline.netlify.com/* https://humanwhocodes.com/:splat 301!
 
 # Scheduling
 /schedule/*     https://humanwhocodes.as.me/:splat 302!
-
-# Feeds
-http://feeds.nczonline.net/blog https://humanwhocodes.com/feeds/blog.xml 301!
-https://feeds.nczonline.net/blog https://humanwhocodes.com/feeds/blog.xml 301!

@@ -10,7 +10,7 @@
 <title>{{ site.name }} - The official website of Nicholas C. Zakas</title>
 {% else %}
 <title>{{ page.title }} - {{ site.name }}</title>
-<meta name="twitter:site" content="@humanwhocodes">
+<meta name="twitter:site" content="@hwcmoney">
 <meta name="twitter:creator" content="@slicknet">
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
 <meta name="twitter:image" content="{{ site.url }}/images/favicon.png" />
@@ -43,8 +43,8 @@
 {% endif %}
 
 {% if page.homepage %}
-<meta name="description" content="The personal web site of front end engineer, book author, and speaker Nicholas C. Zakas.">
-<meta name="keywords" content="JavaScript,ECMAScript,Ajax,Nicholas,Zakas,HTML,Web,DHTML,DOM,Author,Speaker,architecture,NCZOnline">
+<meta name="description" content="The personal finance website of Nicholas C. Zakas.">
+<meta name="keywords" content="Personal finance, investing, real estate, stock market">
 {% else %}
 <meta name="description" content="{{ page.content | strip_html | truncatewords: 33 }}">
 <meta name="keywords" content="{{ page.tags | join: ',' }},Nicholas,Zakas,NCZOnline">
@@ -57,9 +57,7 @@
             <h1 class="no-margin"><a href="/"><img src="/images/logo-full-web.svg" alt="{{ site.name }}" height="50"></a></h1>
             <ul class="inline-list inline-spaced-list center-text-on-small-screens overflow-x-scroll bigger-font all-caps bold">
                 <li class="hide-offscreen"><a href="#content">Skip to content</a></li>
-                <li><a href="/books/" class="dark-text no-underline">Books</a></li>
-                <li><a href="/speaking/" class="dark-text no-underline">Speaking</a></li>
-                <li><a href="/donate/" class="dark-text no-underline">Donate</a></li>
+                <li><a href="https://humanwhocodes.com" class="dark-text no-underline">Tech</a></li>
                 <li><a href="/contact/" class="dark-text no-underline">Contact</a></li>
             </ul>
         </nav>
