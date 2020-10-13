@@ -1,0 +1,4 @@
+[build]
+  command = "npm run datafetch && jekyll build && npm run build && npm run newpostcheck && npm run newsnippetcheck"
+  publish = "_site"
+  functions = "_site/functions"

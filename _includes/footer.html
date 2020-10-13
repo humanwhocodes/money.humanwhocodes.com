@@ -1,0 +1,89 @@
+        </main>
+
+        <div id="sidebar" class="sidebar-width sidebar-background gutters hide-on-small-screens">
+            <h1 class="hide-offscreen">Additional Information</h1>
+            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIEK3Y&placement=humanwhocodescom" id="_carbonads_js"></script>
+        
+            <h2 class="smaller-font">My Books</h2>
+            <ul class="inline-list inline-image-list">
+                {% assign books = site.data.books | where: 'rel', 'author' | where: 'type', 'book' %}
+                {% for book in books limit: 4 %}
+                <li><a href="{{ book.url }}"><img src="/images/books/{{ book.image }}" alt="{{ book.title }}" width="100"></a></li>
+                {% endfor %}
+            </ul>
+            <!-- <li><a href="https://leanpub.com/understandinges6"><img src="/images/ues6.png" width="100" height="126" alt="Understanding ECMAScript 6"/></a></li>
+            <li><a href="http://amzn.to/1mmkyCm"><img src="/images/oopinjsns.png" width="100" height="126" alt="Principles of Object-Oriented JavaScript"/></a></li>
+            <li><a href="http://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680?tag=nczonline-20"><img src="/images/maintainablejs.png" width="100" height="126" alt="Maintainable JavaScript" /></a></li>
+            <li><a href="http://www.amazon.com/Professional-JavaScript-Developers-Nicholas-Zakas/dp/1118026691/ref=sr_1_13?tag=nczonline-20"><img src="/images/pro_js_3e.png" width="100" height="126" alt="Professional JavaScript for Web Developers, 3rd Edition" /></a></li> -->
+            <h2 class="smaller-font">Recent Snippets</h2>
+            <ul class="">
+                {% for snippet in site.snippets limit: 10 %}
+                <li><a href="{{ snippet.url }}">{{ snippet.title }}</a></li>
+                {% endfor %}
+            </ul>
+            <h2 class="smaller-font">Archives</h2>
+            <ul>
+{% assign currentYear = site.time | date: '%Y' %}
+{% for year in (2018..currentYear) reversed %}
+                <li><a href='/blog/{{ year }}/'>{{ year }}</a></li>
+{% endfor %}
+{% for year in (2004..2016) reversed %}
+                <li><a href='/blog/{{ year }}/'>{{ year }}</a></li>
+{% endfor %}
+            </ul>
+
+        </div> <!-- sidebar -->
+    </div> <!-- page-grid -->
+</div> <!-- content-background -->
+<hr>
+<footer class="inverted-colors">
+    <div class="page-width center">
+        <div class="page-grid orange-border-bottom">
+            <div class="margin-top content-width gutters">
+                <div class="collapsible-media-box">
+                    <div class="media-box-media center-text">
+                        <img src="/images/me/me-150x150.jpg" alt="Photo of Nicholas C. Zakas" width="150" class="circle-image">
+                    </div>
+                    <div>
+                        <h2 class="no-margin-top center-text-on-mobile">About the Human</h2>
+                        <p>Hi, I'm Nicholas C. Zakas, an independent software developer living in Mountain View, California. 
+                            I've been a software architect at companies like Yahoo and Box, as well as an author and speaker. 
+                            I created the <a href="https://eslint.org">ESLint</a> open source project and wrote several 
+                            <a href="/books">books</a>. At the moment, I'm <a href="/blog/2014/04/02/i-have-lyme-disease/">recovering from Lyme disease</a> 
+                            and haven't been able to leave my home much in the past five years. (<a href="https://medium.com/lyme-disease-warrior/progress-report-october-2018-fc38d4769e65">Health update</a>, <a rel="me" href="/about">More about me</a>)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="margin-top sidebar-width hide-on-small-screens">
+                <h2 class="no-margin-top">On the Web</h2>
+                <ul>
+                    <li><a href="https://www.twitter.com/slicknet/">Twitter</a></li>
+                    <li><a href="https://www.github.com/nzakas/">GitHub</a></li>
+                    <li><a href="https://patreon.com/nzakas/">Patreon</a></li>
+                    <li><a href="https://www.instagram.com/humanwhocodes">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/channel/UC95Pwj8oPPZN2mJCEtMqOsg">YouTube</a></li>
+                    <li><a href="https://www.linkedin.com/in/nzakas">LinkedIn</a></li>
+                    <li><a href="https://www.slideshare.net/nzakas/presentations/">Slideshare</a></li>
+                    <li><a href="https://amazon.com/author/nzakas/">Amazon</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="center-text"><a href="/policies/privacy">Privacy Policy</a> | <a href="/policies/terms">Terms of Service</a></p>
+        <p class="center-text">Copyright &copy; 2004-{{ site.time | date: '%Y' }} Human Who Codes LLC. Content licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="nofollow noopener">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.<br>All code examples on all pages, unless otherwise indicated, are <a href="/license">BSD licensed</a>.<br>Some links may be affiliate links. We may get paid if you buy something or take an action after clicking one of these. As an Amazon Associate we earn from qualifying purchases. <a href="http://feeds.nczonline.net/blog/">Blog Feed</a></p>
+    </div>
+</footer>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-6849003-1', 'auto');  // Replace with your property ID.
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+</body>
+</html>

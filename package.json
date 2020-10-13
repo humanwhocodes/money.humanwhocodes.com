@@ -1,0 +1,32 @@
+{
+  "name": "nczonline.net",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "netlify-lambda build _functions/src",
+    "newpostcheck": "node _tools/new-post-check.js",
+    "newsnippetcheck": "node _tools/new-snippet-check.js",
+    "datafetch": "node _tools/fetch-sponsors.js",
+    "serve": "bundle exec jekyll serve --config _config.yml,_config.dev.yml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nzakas/nczonline.net.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/nzakas/nczonline.net/issues"
+  },
+  "homepage": "https://github.com/nzakas/nczonline.net#readme",
+  "dependencies": {
+    "@octokit/graphql": "^4.0.0",
+    "aws-sdk": "^2.298.0",
+    "dotenv": "^8.1.0",
+    "form-data": "^2.3.2",
+    "netlify-lambda": "^0.4.0",
+    "node-fetch": "^2.2.0"
+  }
+}

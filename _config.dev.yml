@@ -1,0 +1,25 @@
+# only generate a subset of posts
+limit_posts: 10
+
+# watch for changes and regenerate
+incremental: true
+
+# show unpublished posts
+future: true
+
+# Don't generate this stuff
+exclude:
+  - README.md
+  - CNAME
+  - Gemfile
+  - package.json
+  - node_modules
+  - newsletter
+  - downloads
+  - emails
+  - experiments
+  - sitemap.xml
+
+# disable archive generation
+jekyll-archives:
+  enabled: []

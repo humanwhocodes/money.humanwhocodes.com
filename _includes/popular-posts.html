@@ -1,0 +1,6 @@
+<h2 class="no-margin-top">Popular Posts</h2>
+<ul class="block-list">
+{% for post in site.data.popular limit: 5 %}
+<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

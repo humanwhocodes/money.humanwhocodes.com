@@ -1,0 +1,15 @@
+---
+layout: null
+---
+{
+    {% assign post = site.posts.first %}
+    "id": "{{ post.url | absolute_url | sha1 }}",
+    "title": {{ post.title | jsonify }},
+    "date_published": "{{ post.date | date_to_xmlschema }}",
+    "date_published_pretty": "{{ post.date | date: "%B %-d, %Y" }}",
+    "summary": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
+    "content_markdown": {{ post.rendered_content | jsonify }},
+    "content_html": {{ post.content | jsonify }},
+    "tags": {{ post.tags | jsonify }},
+    "url": "{{ post.url | absolute_url }}"
+}

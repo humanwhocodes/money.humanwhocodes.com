@@ -1,0 +1,6 @@
+<ol>
+{% for post in page.posts %}
+<li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br>
+                <small>{{ post.date | date: "%b %-d, %Y" }}</small></li>
+{% endfor %}
+</ol>

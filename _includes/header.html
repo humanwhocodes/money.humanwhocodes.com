@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ttw" content="cfanq3r">
+
+{% if page.homepage %}
+<title>{{ site.name }} - The official website of Nicholas C. Zakas</title>
+{% else %}
+<title>{{ page.title }} - {{ site.name }}</title>
+<meta name="twitter:site" content="@humanwhocodes">
+<meta name="twitter:creator" content="@slicknet">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+<meta name="twitter:image" content="{{ site.url }}/images/favicon.png" />
+<meta name="twitter:image:alt" content="{{ site.name }}" />
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ post.content | strip_html | truncatewords: 33 }}">
+<meta name="twitter:card" content="summary">
+
+<meta name="og:image" content="{{ site.url }}/images/favicon.png" />
+<meta name="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta name="og:title" content="{{ page.title }}">
+<meta name="og:description" content="{{ post.content | strip_html | truncatewords: 33 }}">
+<meta name="og:type" content="article">
+
+{% endif %}
+
+<link rel="stylesheet" href="/styles/index.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Blog" href="{{ site.feed_source | absolute_url }}">
+<link rel="alternate" type="application/json" title="{{ site.name }} - Blog" href="{{ site.json_feed_source | absolute_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Snippets" href="{{ site.snippets_feed_source | absolute_url }}">
+<link rel="alternate" type="application/json" title="{{ site.name }} - Snippets" href="{{ site.snippets_json_feed_source | absolute_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Everything" href="{{ site.all_feed_source | absolute_url }}">
+<link rel="alternate" type="application/json" title="{{ site.name }} - Everything" href="{{ site.all_json_feed_source | absolute_url }}">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+
+{% if page.updated_post %}
+<link rel="canonical" href="{{ page.updated_post | absolute_url }}">
+{% else %}
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{% endif %}
+
+{% if page.homepage %}
+<meta name="description" content="The personal web site of front end engineer, book author, and speaker Nicholas C. Zakas.">
+<meta name="keywords" content="JavaScript,ECMAScript,Ajax,Nicholas,Zakas,HTML,Web,DHTML,DOM,Author,Speaker,architecture,NCZOnline">
+{% else %}
+<meta name="description" content="{{ page.content | strip_html | truncatewords: 33 }}">
+<meta name="keywords" content="{{ page.tags | join: ',' }},Nicholas,Zakas,NCZOnline">
+{% endif %}
+<script src="/scripts/emailform.js" async></script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    <header class="highlight-background">
+        <nav role="navigation" class="page-width center center-text gutters collapsible-corners">
+            <h1 class="no-margin"><a href="/"><img src="/images/logo-full-web.svg" alt="{{ site.name }}" height="50"></a></h1>
+            <ul class="inline-list inline-spaced-list center-text-on-small-screens overflow-x-scroll bigger-font all-caps bold">
+                <li class="hide-offscreen"><a href="#content">Skip to content</a></li>
+                <li><a href="/books/" class="dark-text no-underline">Books</a></li>
+                <li><a href="/speaking/" class="dark-text no-underline">Speaking</a></li>
+                <li><a href="/donate/" class="dark-text no-underline">Donate</a></li>
+                <li><a href="/contact/" class="dark-text no-underline">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <div class="content-background">
+        <div id="page-grid" class="page-width page-grid center">
+            <main id="content" role="main" class="content-width gutters">
