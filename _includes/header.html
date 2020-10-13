@@ -30,10 +30,6 @@
 <link rel="stylesheet" href="/styles/index.css" type="text/css" media="screen">
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Blog" href="{{ site.feed_source | absolute_url }}">
 <link rel="alternate" type="application/json" title="{{ site.name }} - Blog" href="{{ site.json_feed_source | absolute_url }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Snippets" href="{{ site.snippets_feed_source | absolute_url }}">
-<link rel="alternate" type="application/json" title="{{ site.name }} - Snippets" href="{{ site.snippets_json_feed_source | absolute_url }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Everything" href="{{ site.all_feed_source | absolute_url }}">
-<link rel="alternate" type="application/json" title="{{ site.name }} - Everything" href="{{ site.all_json_feed_source | absolute_url }}">
 <link rel="icon" type="image/png" href="/images/favicon.png">
 
 {% if page.updated_post %}
@@ -47,7 +43,7 @@
 <meta name="keywords" content="Personal finance, investing, real estate, stock market">
 {% else %}
 <meta name="description" content="{{ page.content | strip_html | truncatewords: 33 }}">
-<meta name="keywords" content="{{ page.tags | join: ',' }},Nicholas,Zakas,NCZOnline">
+<meta name="keywords" content="{{ page.tags | join: ',' }},Nicholas,Zakas">
 {% endif %}
 <script src="/scripts/emailform.js" async></script>
 </head>
