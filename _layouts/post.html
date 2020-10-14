@@ -21,15 +21,7 @@
         </aside>
         {% endif %}
 {{ content }}
-<!--
-<div class="center-text">
-{% if page.github_repo %}
-<a href="https://github.com/{{ page.github_repo }}" target="_blank" class="link-btn margin-bottom">View Source on GitHub</a>
-{% endif %}
-{% if page.npm_package %}
-<a href="https://npmjs.com/package/{{ page.npm_package }}" target="_blank" class="link-btn margin-bottom">View Package on npm</a>
-{% endif %}
-</div>-->
+
     </section>
     <footer>
         <div class="gutters round-borders cta-background margin-bottom">
@@ -37,21 +29,10 @@
             <p>If you found this post helpful, please consider donating to support my work.</p>
             <ul class="inline-list grid-columns">
                 <li class="center-text"><a href="https://github.com/users/nzakas/sponsorship" class="link-btn cta-btn">Donate with GitHub</a></li>
-                <!-- <li class="center-text"><a href="https://patreon.com/nzakas" class="link-btn cta-btn">Donate with Patreon</a></li> -->
                 <li class="center-text"><a href="https://www.paypal.com/donate/?token=QV5gLG9Q5szfku7XrfOVQLxk25R5wYQgS5Li_q0si6WRF_XYkhpV6DM0pTIkyQtXDW00tW&country.x=US&locale.x=US" class="link-btn cta-btn">Donate with PayPal</a></li>
             </ul>
         </div>
     </footer>
-<!--
-    <footer class="media-box gutters round-borders cta-background margin-bottom">
-        <div class="media-box-media">
-            <a href="/donate" class="link-btn cta-btn">Donate</a>
-        </div>
-        <div>
-            <p class="no-margin"><b>Was this helpful?</b> If you found this post helpful, I would very much appreciate your support. Donations of any amount gratefully accepted.</p>
-        </div>
-    </footer>
--->
 </article>
 
 <div class="grid-columns">
@@ -61,7 +42,7 @@
     </div>
     <div class="gutters round-borders content-item-border highlight-background">
         <h2 class="no-margin-top">Join the Mailing List</h2>
-        <p>Never miss an update by joining 3,000 other mailing list members.</p>
+        <p>Never miss an update by joining the mailing list.</p>
         <form method="post" name="sideemailform" action="https://mailinglist.humanwhocodes.com/api/subscribe">
             <div id="mc_embed_signup_scroll">
                 <div style="margin-bottom: 0.5em">
@@ -79,6 +60,7 @@
                         <input type="email" value="" style="width:100%" name="email" required>
                     </label>
                 </div>
+                <input type="hidden" name="formId" value="1741986">
                 <div class="center-text gutters">
                     <input type="submit" value="Subscribe">
                 </div>
@@ -86,23 +68,5 @@
         </form>
     </div>
 </div>
-{% capture postYear %}{{ page.date | date: '%Y' }}{% endcapture %}
-{% assign postYear = postYear | plus: 0 %}
-{% if postYear < 2018 %}
-<div id="disqus_thread" class="hide-on-mobile"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'nczonline',
-        disqus_url = 'http://humanwhocodes.com{{ page.url }}';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-{% endif %}
 
 {% include_cached footer.html %}
