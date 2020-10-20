@@ -2,7 +2,7 @@
 layout: post
 title: "Welcome to the Human Who Codes Money blog"
 teaser: "Introducing a new home for my personal finance and related posts."
-date: 2020-10-20
+date: 2020-10-19
 categories:
 - Announcement
 tags:
