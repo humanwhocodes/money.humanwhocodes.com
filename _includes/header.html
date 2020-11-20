@@ -34,6 +34,8 @@
 
 {% if page.updated_post %}
 <link rel="canonical" href="{{ page.updated_post | absolute_url }}">
+{% elsif page.original %}
+<link rel="canonical" href="{{ page.original.url }}">
 {% else %}
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 {% endif %}

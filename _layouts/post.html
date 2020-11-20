@@ -20,6 +20,11 @@
             <p>This post is outdated. <a href="{{ page.updated_post | absolute_url }}">Read the updated post</a>.</p>
         </aside>
         {% endif %}
+        {% if page.original %}
+        <aside class="margin-top">
+            <p>This post originally appeared on <a href="{{ page.original.blog.url }}">{{ page.original.blog.title }}</a> on <a href="{{ page.original.url }}">{{ page.original.date | date: "%B %-d, %Y" }}</a>.</p>
+        </aside>
+        {% endif %}
 {{ content }}
 
     </section>
