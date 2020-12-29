@@ -24,7 +24,7 @@ These are the actual numbers I'm dealing with:
 | Monthly disability payment | $10,000 |
 | Federal taxes (30%)        | -$3,000 |
 | Legal Fees (24%)           | -$2,400 |
-| **Net payment**            | **$4,6000** |
+| **Net payment**            | **$4,600** |
 
 I asked to have 30% federal taxes withheld even though my effective federal tax rate was 20% last year because I also end up paying 10% to the state of California. The disability company won't withhold state taxes, so after I do my taxes I basically get a refund from the IRS that I end up paying directly to California.
 
