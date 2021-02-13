@@ -1,4 +1,3 @@
-
 "Entrepreneurship":
 
   - title: The E-myth Revisited
@@ -13,6 +12,11 @@
 
 "Money Mindset":
 
+  - title: The Millionaire Mind
+    author: Thomas J. Stanley
+    url: https://geni.us/millionaire-mind-hwc
+    image: millionaire-mind.jpg
+
   - title: The Millionaire Next Door
     author: Thomas J. Stanley, William D. Danko
     url: https://geni.us/millionaire-next-door
@@ -24,6 +28,13 @@
     author:  Dave Van Horn
     url: https://geni.us/re-note-investing
     image: re-note-investing.jpg
+
+"Real Estate Fundraising":
+
+  - title: Getting the Money
+    author:  Susan Lasiter-Lyons
+    url: https://geni.us/getting-money
+    image: getting-money.jpg
 
 "Real Estate Rehabs and Flipping":
 
@@ -37,7 +48,7 @@
     url: https://geni.us/brrrr
     image: brrrr.jpg
 
-"Rental Properties":
+"Real Estate Rental Properties":
 
   - title: The Book on Rental Property Investing
     author:  Brandon Turner
@@ -53,3 +64,10 @@
     author: Chad Carson
     url: https://geni.us/retire-early-re
     image: retire-early-re.jpg
+
+"Stock Market Investing":
+
+  - title: The Motley Fool Investment Guide
+    author:  Tom Gardner, David Gardner
+    url: https://geni.us/fool-invest-guide
+    image: motley-fool-investment-guide.jpg
