@@ -25,13 +25,6 @@ const DATA_DIR = path.resolve(__dirname, "../data");
 // Exports
 //-----------------------------------------------------------------------------
 
-export async function loadDataFile(filename) {
-    const filePath = path.join(DATA_DIR, filename);
-    const text = await fs.readFile(filePath, "utf8");
-
-    return yaml.load(text);
-}
-
 export async function loadBlogPosts(posts) {
 
     return posts.map(post => {

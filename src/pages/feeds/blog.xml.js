@@ -1,10 +1,10 @@
 import rss from '@astrojs/rss';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import site from "../../data/config.yml";
 
 export const get = () =>
 	rss({
-		title: SITE_TITLE,
-		description: SITE_DESCRIPTION,
+		title: site.name,
+		description: site.description,
 		site: import.meta.env.SITE,
-		items: import.meta.glob('../posts/**/*.md'),
+		items: import.meta.glob('../_posts/**/*.md'),
 	});

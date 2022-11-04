@@ -1,5 +1,6 @@
 ---
 import { loadDataFile } from '../lib/util';
+import site from "../data/config.yml";
 
 export interface Props {
 	title: string;
@@ -7,8 +8,6 @@ export interface Props {
 	originalUrl?: string;
 	image?: string;
 }
-
-const site = await loadDataFile("config.yml");
 
 const {
 	title,

@@ -1,7 +1,5 @@
 ---
-import { loadDataFile } from "../lib/util";
-
-const reading = await loadDataFile("reading.yml");
+import reading from "../data/reading.yml";
 ---
 {Object.keys(reading).sort().map(key => <>
     <h2>{key} ({reading[key].length})</h2>
