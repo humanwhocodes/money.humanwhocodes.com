@@ -19,6 +19,7 @@
     "@rollup/plugin-yaml": "^4.0.1",
     "astro": "^1.6.2",
     "js-yaml": "^3.14.1",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.5",
+    "xml-escape": "^1.1.0"
   }
 }
