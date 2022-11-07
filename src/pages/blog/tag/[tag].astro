@@ -5,9 +5,8 @@ import { loadBlogPosts } from "../../../lib/util.js";
 import slugify from "slugify";
 
 export async function getStaticPaths() {
-console.log("HELLO")
+    
     const posts = await loadBlogPosts();
-console.log(posts.length);
     const postTags = new Map();
     posts.forEach(post => {
 
@@ -21,7 +20,6 @@ console.log(posts.length);
 
         }
     });
-console.log(postTags);
 
     return [...postTags.entries()].map(([tag, posts]) => ({
         params: { tag: slugify(tag.toLowerCase()) },
