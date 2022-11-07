@@ -1,5 +1,6 @@
 ---
 import me from "../images/me/me-150x150.jpg";
+import site from "../data/config.yml";
 
 const today = new Date();
 ---
@@ -36,6 +37,6 @@ const today = new Date();
             </div>
         </div>
         <p class="center-text"><a href="/policies/privacy">Privacy Policy</a> | <a href="/policies/terms">Terms of Service</a></p>
-        <p class="center-text">Copyright &copy; 2020-{ today.getFullYear() } Human Who Codes LLC. Content licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="nofollow noopener">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.<br>Some links may be affiliate links. We may get paid if you buy something or take an action after clicking one of these. As an Amazon Associate we earn from qualifying purchases. <a href="/blog/feed.xml">Blog Feed</a></p>
+        <p class="center-text">Copyright &copy; 2020-{ today.getFullYear() } Human Who Codes LLC. Content licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="nofollow noopener">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.<br>Some links may be affiliate links. We may get paid if you buy something or take an action after clicking one of these. As an Amazon Associate we earn from qualifying purchases. <a href={ site.feed_source }>Blog Feed</a></p>
     </div>
 </footer>

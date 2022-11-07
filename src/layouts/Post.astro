@@ -22,7 +22,7 @@ const { post } = Astro.props;
                     C. Zakas</span></p>
             <p class="no-margin-top tags">Tags:
 				{post.frontmatter.tags.map((tag, index) => 
-                	<a href={"/blog/tag/" + slugify(tag.toLowerCase())} rel="tag">{ tag }</a>
+                	<a href={"/blog/tag/" + slugify(tag.toLowerCase()) + "/"} rel="tag">{ tag }</a>
                     <span>{ index < post.frontmatter.tags.length - 1 ? ", " : ""}</span>
 				)}
             </p>

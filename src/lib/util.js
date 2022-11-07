@@ -8,38 +8,11 @@
 // Imports
 //-----------------------------------------------------------------------------
 
-
-//-----------------------------------------------------------------------------
-// Data
-//-----------------------------------------------------------------------------
-
+import path from "path";
 
 //-----------------------------------------------------------------------------
 // Exports
 //-----------------------------------------------------------------------------
-
-export async function loadBlogPostsX(posts) {
-
-    return posts.map(post => {
-
-        const filename = path.basename(post.file, ".md");
-        const urlParts = {
-            year: filename.slice(0, 4),
-            month: filename.slice(5, 7),
-            slug: filename.slice(11)
-        };
-
-        const newPost = Object.create(post, {
-            url: { value: `/blog/${urlParts.year}/${urlParts.month}/${urlParts.slug}/` }
-        });
-
-        newPost.urlParts = urlParts;
-        newPost.frontmatter.date = new Date(filename.slice(0, 10));
-        newPost.frontmatter.pubDate = newPost.frontmatter.date;
-        return newPost;
-    });
-
-}
 
 export async function loadBlogPosts() {
 
@@ -66,6 +39,6 @@ export async function loadBlogPosts() {
         newPost.frontmatter.date = new Date(filename.slice(0, 10));
         newPost.frontmatter.pubDate = newPost.frontmatter.date;
         return newPost;
-    });
+    }).reverse();
 
 }
