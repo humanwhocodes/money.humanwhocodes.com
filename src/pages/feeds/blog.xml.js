@@ -2,10 +2,11 @@ import site from "../../data/config.yml";
 import xmlEscape from "xml-escape";
 import { loadBlogPosts } from "../../lib/util";
 
-const posts = await loadBlogPosts();
 
 export async function get() {
-
+	
+	const posts = await loadBlogPosts();
+	
 	return {
 		body: `
 		<?xml version="1.0" encoding="utf-8"?>
