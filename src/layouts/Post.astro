@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import slugify from "slugify";
+import MailingListForm from "../components/MailingListForm.astro";
 
 const { post } = Astro.props;
 ---
@@ -31,5 +32,6 @@ const { post } = Astro.props;
     <section id="post-body" class="content-font">
 		<slot />
     </section>
-</article>	
+</article>
+<MailingListForm />
 </Layout>

@@ -17,6 +17,7 @@ const {
 } = Astro.props;
 
 const pageTitle = title ? `${title} - ${site.name}` : site.name;
+const blogTitle = `${site.name} - Blog`;
 ---
 
 <Analytics />
@@ -35,6 +36,10 @@ const pageTitle = title ? `${title} - ${site.name}` : site.name;
 
 <!-- Canonical URLs -->
 <link rel="canonical" href={originalUrl ? originalUrl : Astro.url}>
+
+<!-- Feeds -->
+<link rel="alternate" type="application/rss+xml" title={blogTitle} href={new URL(site.feed_source, site.url).href}>
+<link rel="alternate" type="application/json" title={blogTitle} href={new URL(site.json_feed_source, site.url).href}>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
